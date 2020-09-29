@@ -234,7 +234,7 @@
 </head>
 <body class="body-me">
     <h1 class="h1-welcome">W E L C O M E &nbsp;&nbsp;  T O &nbsp;&nbsp;  F R E N D Y</h1><br>
-    <div class="form-signin text-center " action="/" method="POST">
+    <form class="form-signin text-center " action="/" method="POST">
         <img
           class="tetrad-logo"
           src="logo.jpeg"
@@ -242,14 +242,16 @@
           width="72"
           height="72"
         />
-        <a class="btn btn-dark btn-md btn-home" href="/adminLogIn" role="button"
-          >Admin</a
+        <h4>SELECT LANGUAGE: </h4>
+        <button class="btn btn-dark btn-md btn-home" type="submit" name="languageButton" value="english"
+          >ENGLISH</button
         >
-        <form action="/partner" method="post">
-          <button class="btn btn-dark btn-md btn-home" name="languageButton" type="submit" value="english"
-          >Partner Registeration</button
+        <button class="btn btn-dark btn-md btn-home" type="submit" name="languageButton" value="hindi"
+          >HINDI</button
         >
-        </form>
+        <button class="btn btn-dark btn-md btn-home" type="submit" name="languageButton" value="gujarati"
+          >GUJARATI</button
+        >
     </div>
       <footer>
 </body>
