@@ -13,7 +13,7 @@
       rel="stylesheet"
     />
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="form1.css">
+    <link rel="stylesheet" href="styles.css">
     <style>
         .body-me {
     display: -ms-flexbox;
@@ -39,11 +39,6 @@
     margin-bottom: 5%;
     margin-top: 5%;
   }
-  /* .copyright {
-    color: black;
-    margin-bottom: 0;
-    font-family: "Montserrat", sans-serif;
-  } */
   .h3 {
     color: #212f3d;
     font-family: "Bebas Neue", cursive;
@@ -208,33 +203,12 @@
     height: 100%;
     border: none;
   }
-  
-  /* mainpage
-  .columns {
-    height: 52vh;
-    padding: 0;
-  }
-  
-  .titles {
-    vertical-align: middle;
-    text-align: center;
-    top: 31%;
-    font-family: "Bebas Neue", cursive;
-    font-size: 4rem;
-    font-weight: 700;
-    letter-spacing: 10px;
-  }
-  @media (max-width: 992px) {
-    .titles {
-      font-size: 3.5rem;
-      letter-spacing: 8px;
-    }
-  } */
+
     </style>
 </head>
 <body class="body-me">
     <h1 class="h1-welcome">W E L C O M E &nbsp;&nbsp;  T O &nbsp;&nbsp;  F R E N D Y</h1><br>
-    <div class="form-signin text-center " action="/" method="POST">
+    <form class="form-signin text-center " action="/adminLogIn" method="POST">
         <img
           class="tetrad-logo"
           src="logo.jpeg"
@@ -242,13 +216,10 @@
           width="72"
           height="72"
         />
-        <a class="btn btn-dark btn-md btn-home" href="/adminLogIn" role="button"
-          >Admin</a
-        >
-        <a class="btn btn-dark btn-md btn-home" href="/partner" role="button"
-          >Partner Registeration</a
-        >
-    </div>
+        <input autocomplete="off" name="adminUsername" type="text" placeholder="Enter Username here" class="admin-input-box">
+        <input name="adminPassword" type="password" placeholder="Enter Password here" class="admin-input-box">
+        <button type="submit" class="btn btn-dark btn-md btn-home">Submit</button>
+    </form>
       <footer>
 </body>
 

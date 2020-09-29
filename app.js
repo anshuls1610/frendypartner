@@ -58,23 +58,36 @@ const partnerSchema = new mongoose.Schema({
     have_a_common_communication_platform_for_residents:String,
   },
   form5:{
-	signature:String,
+    signature:String,
     place:String,
     date:String
   }
 });
 const Partner = mongoose.model("Partner", partnerSchema);
 var searchquery="";
+var adminCredentials={
+  adminUsername:"test123",
+  adminPassword:"qwerty"
+}
 // app.listen("3000", function (req, res) {
 //   console.log("Port 3000 is up and running");
 // });
 app.get("/", function (req, res) {
   res.sendFile( __dirname+"/gateway.html")
 });
-app.get("/admin",function(req,res){
-    Partner.find(function(err,data){
+app.get("/adminLogIn",function(req,res){
+    res.render("adminLogIn");
+})
+app.post("/adminLogIn",(req,res)=>{
+  if(req.body.adminUsername===adminCredentials.adminUsername 
+      && req.body.adminPassword===adminCredentials.adminPassword){
+        Partner.find(function(err,data){
         res.render("showPartners",{data:data})
     })
+      }
+    else{
+      res.render("success",{data:"Please ensure you have entered correct username and password"})
+    }
 })
 app.get("/partner",function(req,res){
     res.sendFile(__dirname+"/form-1.html")
@@ -152,12 +165,7 @@ app.post("/form5", upload.single('signatureImage'), function(req, res, next){
         }
     },function(err,data){
         if(!err){
-            res.render("success")
+            res.render("success",{data:"Thank you for Registering with Frendy! We will contact you shortly"})
         }
-    })
-})
-app.get("/getData",function(req,res){
-    Partner.find(function(err,data){
-        res.render("showPartners",{data:data})
     })
 })

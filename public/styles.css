@@ -21,3 +21,13 @@ hr {
     width: 210px;
     height: 100px;
 }
+
+/* gateway  */
+.h1-welcome{
+    position: absolute;
+    top: 5%;
+    font-family: "Bebas Neue", cursive;
+}
+.admin-input-box{
+    margin-bottom: 4%
+}
