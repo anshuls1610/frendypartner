@@ -62,31 +62,78 @@ const partnerSchema = new mongoose.Schema({
     have_a_common_communication_platform_for_residents:String,
   },
   form5:{
-	signature:String,
+    signature:String,
     place:String,
     date:String
   }
 });
 const Partner = mongoose.model("Partner", partnerSchema);
 var searchquery="";
+var adminCredentials={
+  adminUsername:"test123",
+  adminPassword:"qwerty"
+}
 // app.listen("3000", function (req, res) {
 //   console.log("Port 3000 is up and running");
 // });
 app.get("/", function (req, res) {
-  res.sendFile( __dirname+"/gateway.html")
+  res.sendFile( __dirname+"/language-gateway.html")
 });
-app.get("/admin",function(req,res){
-    Partner.find(function(err,data){
+app.post("/",(req,res)=>{
+  const language=req.body.languageButton;
+  if (language==="english"){
+    res.sendFile(__dirname+"/gateway.html");
+  }
+  else if(language==="hindi"){
+    res.sendFile(__dirname+"/hindi/gateway-hindi.html")
+  }
+  else{
+    res.sendFile(__dirname+"/gujarati/gateway-gujarati.html")
+  }
+}) 
+// start of admin routes 
+app.get("/adminLogIn",function(req,res){
+    res.render("adminLogIn");
+})
+app.post("/adminLogIn",(req,res)=>{
+  if(req.body.adminUsername===adminCredentials.adminUsername 
+      && req.body.adminPassword===adminCredentials.adminPassword){
+        Partner.find(function(err,data){
         res.render("showPartners",{data:data})
     })
+      }
+    else{
+      res.render("success",{data:"Please ensure you have entered correct username and password"})
+    }
 })
-app.get("/partner",function(req,res){
-    res.sendFile(__dirname+"/form-1.html")
+// end of admin routes 
+app.post("/partner",function(req,res){
+  // console.log(req.body.languageButton);
+    if (req.body.languageButton==="english"){
+    res.sendFile(__dirname+"/form-1.html");
+  }
+  else if(req.body.languageButton==="hindi"){
+    res.sendFile(__dirname+"/hindi/form-1-hindi.html")
+  }
+  else{
+    res.sendFile(__dirname+"/gujarati/form-1-gujarati.html")
+  }
 })
-app.get("/form2",function(req,res){
-    res.sendFile(__dirname+"/form-2.html")
+app.post("/form2-language",function(req,res){
+  // console.log(req.body.languageButton);
+  if (req.body.languageButton==="english"){
+    res.sendFile(__dirname+"/form-2.html");
+  }
+  else if(req.body.languageButton==="hindi"){
+    res.sendFile(__dirname+"/hindi/form-2-hindi.html")
+  }
+  else{
+    
+    res.sendFile(__dirname+"/gujarati/form-2-gujarati.html")
+  }
+    // res.sendFile(__dirname+"/form-2.html")
 })
-app.post("/form2", function (req, res) {
+app.post("/form2-data", function (req, res) {
   searchquery=req.body.form2mobile+req.body.form2first_name+req.body.form2last_name+req.body.form2age+req.body.form2gender+req.body.form2education
   const newPartner = new Partner({
     firstName: req.body.form2first_name,
@@ -108,11 +155,21 @@ app.post("/form2", function (req, res) {
     },
   });
   newPartner.save(()=>{
-      res.sendFile(__dirname+"/form-3.html")
+    if (req.body.languageButton==="english"){
+      res.sendFile(__dirname+"/form-3.html");
+    }
+    else if(req.body.languageButton==="hindi"){
+      res.sendFile(__dirname+"/hindi/form-3-hindi.html")
+    }
+    else{
+      
+      res.sendFile(__dirname+"/gujarati/form-3-gujarati.html")
+    }
+      // res.sendFile(__dirname+"/form-3.html")
   })
 });
 
-app.post("/form3",function(req,res){
+app.post("/form3-data",function(req,res){
     Partner.findOneAndUpdate({searchquery:searchquery},{
         form3:{
             occupation:req.body.form3occupation,
@@ -126,11 +183,21 @@ app.post("/form3",function(req,res){
         }
     },(err,data)=>{
         if(!err){
-            res.sendFile(__dirname+"/form-4.html")
+          if (req.body.languageButton==="english"){
+            res.sendFile(__dirname+"/form-4.html");
+          }
+          else if(req.body.languageButton==="hindi"){
+            res.sendFile(__dirname+"/hindi/form-4-hindi.html")
+          }
+          else{
+            
+            res.sendFile(__dirname+"/gujarati/form-4-gujarati.html")
+          }
+            // res.sendFile(__dirname+"/form-4.html")
         }
     })
 })
-app.post("/form4",function(req,res){
+app.post("/form4-data",function(req,res){
     Partner.findOneAndUpdate({searchquery:searchquery},{
         form4:{
             Does_your_society_has:req.body.form4society,
@@ -142,26 +209,39 @@ app.post("/form4",function(req,res){
         }
     },function(err,data){
         if(!err){
-           res.sendFile(__dirname+"/form-5.html")
+          if (req.body.languageButton==="english"){
+            res.sendFile(__dirname+"/form-5.html");
+          }
+          else if(req.body.languageButton==="hindi"){
+            res.sendFile(__dirname+"/hindi/form-5-hindi.html")
+          }
+          else{
+            
+            res.sendFile(__dirname+"/gujarati/form-5-gujarati.html")
+          }
+          //  res.sendFile(__dirname+"/form-5.html")
         }
     })
 })
-app.post("/form5", upload.single('signatureImage'), function(req, res, next){
-	console.log(req.file)
+app.post("/form5-data",function(req, res){
+	// console.log(req.body)
     Partner.findOneAndUpdate({searchquery:searchquery},{
 			form5:{
-			signature: req.file.path,
             place:req.body.form5place,
             date:req.body.date
         }
     },function(err,data){
         if(!err){
-            res.render("success")
+          if (req.body.languageButton==="english"){
+            res.render("success",{data:"Thank you for Registering with Frendy! We will contact you shortly"})
+          }
+          else if(req.body.languageButton==="hindi"){
+            res.render("success",{data:"Thank you for Registering with Frendy! We will contact you shortly HINDI"})
+          }
+          else{
+            res.render("success",{data:"Thank you for Registering with Frendy! We will contact you shortly GUJARATI"})
+          }
+            // res.render("success",{data:"Thank you for Registering with Frendy! We will contact you shortly"})
         }
-    })
-})
-app.get("/getData",function(req,res){
-    Partner.find(function(err,data){
-        res.render("showPartners",{data:data})
     })
 })
