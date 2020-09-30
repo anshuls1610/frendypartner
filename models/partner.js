@@ -8,7 +8,6 @@ const partnerSchema = new mongoose.Schema({
   education: String,
   searchquery:String,
   form_language:String,
-  Address: {
     house: String,
     block: String,
     apartment: String,
@@ -18,8 +17,6 @@ const partnerSchema = new mongoose.Schema({
     pincode: String,
     mobile: String,
     email: String,
-  },
-  form3:{
     occupation:String,
     business:String,
     eFrendyPartner:String,
@@ -28,19 +25,17 @@ const partnerSchema = new mongoose.Schema({
     jointFamily:String,
     flat:String,
     How_long_you_have_been_staying_in_the_house:String,
-  },
-  form4:{
     Does_your_society_has:String,
     If_flats_how_many_flats:String,
     how_many_such_buildings:String,
     total_flats_or_houses:String,
     have_a_whatsapp_group_for_residents:String,
     have_a_common_communication_platform_for_residents:String,
-  },
-  form5:{
-    signature:String,
+	signature:String,
     place:String,
-    date:String
-  }
+    date:String,
+    terms_and_conditions1:String,
+    terms_and_conditions2:String,
+    terms_and_conditions3:String
 });
 module.exports = mongoose.model("Partner", partnerSchema);

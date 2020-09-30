@@ -41,7 +41,6 @@ searchquery=req.body.form2mobile+req.body.form2first_name+req.body.form2last_nam
     gender: req.body.form2gender,
     education: req.body.form2education,
     searchquery:req.body.form2mobile+req.body.form2first_name+req.body.form2last_name+req.body.form2age+req.body.form2gender+req.body.form2education,
-    Address: {
       house: req.body.form2house,
       block: req.body.form2block,
       apartment: req.body.form2apartment,
@@ -51,7 +50,6 @@ searchquery=req.body.form2mobile+req.body.form2first_name+req.body.form2last_nam
       pincode: req.body.form2pincode,
       mobile: req.body.form2mobile,
       email: req.body.form2email,
-    },
   });
   newPartner.save(()=>{
     if (req.body.languageButton==="english"){
@@ -68,7 +66,6 @@ searchquery=req.body.form2mobile+req.body.form2first_name+req.body.form2last_nam
 
 router.post("/form3-data",function(req,res){
     Partner.findOneAndUpdate({searchquery:searchquery},{
-        form3:{
             occupation:req.body.form3occupation,
             business:req.body.form3business,
             eFrendyPartner:req.body.form3frendy_partner,
@@ -77,7 +74,6 @@ router.post("/form3-data",function(req,res){
             jointFamily:req.body.form3joint_family,
             flat:req.body.form3own_flat,
             How_long_you_have_been_staying_in_the_house:req.body.form3stay_house
-        }
     },(err,data)=>{
         if(!err){
           if (req.body.languageButton==="english"){
@@ -94,14 +90,12 @@ router.post("/form3-data",function(req,res){
 })
 router.post("/form4-data",function(req,res){
     Partner.findOneAndUpdate({searchquery:searchquery},{
-        form4:{
             Does_your_society_has:req.body.form4society,
             If_flats_how_many_flats:req.body.form4flats,
             how_many_such_buildings:req.body.form4buildings,
             total_flats_or_houses:req.body.form4total_flats,
             have_a_whatsapp_group_for_residents:req.body.form4common_whatsapp,
             have_a_common_communication_platform_for_residents:req.body.form4common_platform
-        }
     },function(err,data){
         if(!err){
           if (req.body.languageButton==="english"){
@@ -117,14 +111,16 @@ router.post("/form4-data",function(req,res){
     })
 })
 router.post("/form5-data", upload.single('signatureImage'), function(req, res, next){
-	console.log(req.file)
+  console.log(req.file)
+ 
     Partner.findOneAndUpdate({searchquery:searchquery},{
 			form_language:req.body.languageButton,
-			form5:{
 			signature: req.file.path,
             place:req.body.form5place,
-            date:req.body.date
-        }
+            date:req.body.date,
+            terms_and_conditions1:req.body.terms_and_conditions1,
+            terms_and_conditions2:req.body.terms_and_conditions2,
+            terms_and_conditions3:req.body.terms_and_conditions3
     },function(err,data){
         if(!err){
           if (req.body.languageButton==="english"){

@@ -12,37 +12,45 @@
                         <li><p>Partner Age :<%= data.age %></p></li>
                         <li><p>Partner Gender :<%= data.gender %></p></li>
                         <li><p>Partner Education :<%= data.education %></p></li>
-                        <li><p>Partner Place :<%= data.form5.place %></p></li>
-                        <li><p>Form Date :<%= data.form5.date %></p></li>
+                        <li><p>Partner Place :<%= data.place %></p></li>
+                        <li><p>Form Date :<%= data.date %></p></li>
 						<li><p>Signature : 
-							<img class="signature"src="<%= data.form5.signature %>">
+							<img class="signature"src="<%= data.signature %>">
 							</p>
 						</li>
                     </ul>
                 </div>
                 <div class="col-4">
                     <ul>
-                        <li><p>Occupation :<%= data.form3.occupation %></p></li>
-                        <li><p>Business :<%= data.form3.business %></p></li>
-                        <li><p>eFrendy Partner:<%= data.form3.eFrendyPartner %></p></li>
-                        <li><p>smartPhone :<%= data.form3.smartPhone %></p></li>
-                        <li><p>Payment Mode :<%= data.form3.payment %></p></li>
-                        <li><p>Have a joint family :<%= data.form3.jointFamily %></p></li>
-                        <li><p>owns a flat:<%= data.form3.flat %></p></li>
-                        <li><p>staying in rented house :<%= data.form3.How_long_you_have_been_staying_in_the_house %></p></li> 
+                        <li><p>Occupation :<%= data.occupation %></p></li>
+                        <li><p>Business :<%= data.business %></p></li>
+                        <li><p>eFrendy Partner:<%= data.eFrendyPartner %></p></li>
+                        <li><p>smartPhone :<%= data.smartPhone %></p></li>
+                        <li><p>Payment Mode :<%= data.payment %></p></li>
+                        <li><p>Have a joint family :<%= data.jointFamily %></p></li>
+                        <li><p>owns a flat:<%= data.flat %></p></li>
+                        <li><p>staying in rented house :<%= data.How_long_you_have_been_staying_in_the_house %></p></li> 
                     </ul>
                 </div>
                 <div class="col-4">
                     <ul>
-                        <li><p>Society has :<%= data.form4. Does_your_society_has %></p></li>
-                        <li><p>number of flats in buildings :<%= data.form4.If_flats_how_many_flats %></p></li>
-                        <li><p>number of buildings<%= data.form4.how_many_such_buildings %></p></li>
-                        <li><p>Total flats/houses:<%= data.form4.total_flats_or_houses %></p></li>
-                        <li><p>Has a common whatsapp group ?:<%= data.form4.have_a_whatsapp_group_for_residents %></p></li>
-                        <li><p>Has a common communication platform ? :<%= data.form4.have_a_common_communication_platform_for_residents 								%></p></li>
+                        <li><p>Society has :<%= data.Does_your_society_has %></p></li>
+                        <li><p>number of flats in buildings :<%= data.If_flats_how_many_flats %></p></li>
+                        <li><p>number of buildings<%= data.how_many_such_buildings %></p></li>
+                        <li><p>Total flats/houses:<%= data.total_flats_or_houses %></p></li>
+                        <li><p>Has a common whatsapp group ?:<%= data.have_a_whatsapp_group_for_residents %></p></li>
+                        <li><p>Has a common communication platform ? :<%= data.have_a_common_communication_platform_for_residents 								%></p></li>
                     </ul>
                 </div>
 			</div>
+		<ul>
+			<li><p>I hereby confirm that I have read and understood the terms & conditions
+    shared with me and apply to become a Partner at Frendy (Areli Commerce Pvt Ltd).: <%= data.terms_and_conditions1 %></p></li>
+			<li><p>I agree to abide by the terms, conditions, rules, regulation and other statutory requirements applicable to the
+                        respective company.: <%= data.terms_and_conditions2 %></p></li>
+			<li><p>I have understood my roles and responsibilities as a Frendy Partner and the expectations from me.: 
+				<%= data.terms_and_conditions3 %></p></li>
+		</ul>
 		
 	</div>
 	<a class="btn btn-primary" href="/partner/<%= data._id %>/edit">Edit</a>
