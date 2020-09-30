@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document-1</title>
+    <title>Frendy Partner Registration</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
     <style>
@@ -17,27 +18,27 @@
             height: fit-content;
             display: flex;
             width: fit-content;
-            border: 3px solid orange;
+            /* border: 3px solid orange; */
             /* margin: 80px 150px 0px 150px; */
             margin: auto;
         }
 
         .img img {
-            width: 550px;
-            height: 700px;
+            width: 400px;
+            height: 500px;
         }
 
         .content {
             text-align: center;
-            width: 700px;
-            height: 198px;
-            padding: 250px 0px;
+            width: 400px;
+            height: 400px;
+            margin-top: 150px;
             font-family: 'Archivo Black', sans-serif;
-            border: 1px solid rgba(0, 0, 0, 0.164);
         }
 
         .content h1 {
             color: rgb(80, 87, 94);
+            font-size: 25px;
         }
 
         .content h4 {
@@ -45,37 +46,46 @@
             margin-top: 15px;
         }
 
-        .btn{
-            margin-top: 25px;
-            padding: 10px 45px;
-            background-color: rgb(80, 87, 94);
-            outline: none;
-            border: none;
-            border-radius: 5px;
-            color: rgba(255, 255, 255, 0.678);
-            cursor: pointer;
-			text-decoration: none;
-        } !important
-		
-        .btn:hover {
-            background-color: rgba(80, 87, 94, 0.767);
-            color: rgba(255, 255, 255, 0.678);
+        .content-p1 {
+            margin-top: 60px;
         }
 
-        .content p {
-            margin-top: 260px;
+        .content-a1 {
+            /* margin-top: 60px; */
+            padding: 10px;
+            background-color: rgba(70, 70, 90, 0.863);
+            color: white;
+            border-radius: 7px;
+            text-decoration: none;
         }
 
-        a {
+        .content-a1:hover {
+            background-color: rgba(70, 70, 90, 0.527);
+        }
+
+        .content-p2 {
+            margin-top: 120px;
+        }
+
+        .content-a2 {
             color: rgba(103, 106, 109, 0.452);
             font-size: 12px;
         }
 
         h1 {
-            letter-spacing: 8px;
+            letter-spacing: 4px;
+        }
+
+        .header img {
+            height: 50px;
+            display: none;
         }
 
         @media only screen and (max-width: 360px) {
+            .header img {
+                height: 50px;
+            }
+
             .all {
                 width: 360px;
                 display: flex;
@@ -84,7 +94,7 @@
 
             .img img {
                 width: 360px;
-                height: 320px;
+                height: 450px;
             }
 
             .content {
@@ -94,26 +104,43 @@
                 padding: 5px 0px;
                 padding-top: 50px;
                 font-family: 'Archivo Black', sans-serif;
-                border: 1px solid rgba(0, 0, 0, 0.164);
             }
 
-            .content p {
-                margin-top: 120px;
+            .content-p1 {
+                margin-top: 100px;
             }
 
-            a {
+            .content-a1 {
+                margin-top: 60px;
+                padding: 10px;
+                background-color: rgba(70, 70, 90, 0.863);
+                color: white;
+                border-radius: 7px;
+                text-decoration: none;
+            }
+
+            .content-a1:hover {
+                background-color: rgba(70, 70, 90, 0.527);
+            }
+
+            .content-p2 {
+                margin-top: 70px;
+            }
+
+            .content-a2 {
                 color: rgba(103, 106, 109, 0.452);
-                font-size: 10px;
+                font-size: 12px;
             }
 
             h4 {
-                margin-top: 15px;
+                margin-top: 25px;
+                font-size: 12px;
             }
 
-            .btn {
-                margin-top: 25px;
-                padding: 10px 25px;
-            } 
+            h1 {
+                letter-spacing: 3px;
+                font-size: 20px;
+            }
         }
 
         @media only screen and (min-width: 361px) and (max-width: 375px) {
@@ -125,7 +152,7 @@
 
             .img img {
                 width: 375px;
-                height: 350px;
+                height: 450px;
             }
 
             .content {
@@ -135,25 +162,42 @@
                 padding: 5px 0px;
                 padding-top: 50px;
                 font-family: 'Archivo Black', sans-serif;
-                border: 1px solid rgba(0, 0, 0, 0.164);
             }
 
-            .content p {
-                margin-top: 120px;
+            .content-p1 {
+                margin-top: 100px;
             }
 
-            a {
+            .content-a1 {
+                margin-top: 60px;
+                padding: 10px;
+                background-color: rgba(70, 70, 90, 0.863);
+                color: white;
+                border-radius: 7px;
+                text-decoration: none;
+            }
+
+            .content-a1:hover {
+                background-color: rgba(70, 70, 90, 0.527);
+            }
+
+            .content-p2 {
+                margin-top: 70px;
+            }
+
+            .content-a2 {
                 color: rgba(103, 106, 109, 0.452);
-                font-size: 10px;
+                font-size: 12px;
             }
 
             h4 {
-                margin-top: 15px;
+                margin-top: 25px;
+                font-size: 12px;
             }
 
-            .btn {
-                margin-top: 25px;
-                padding: 10px 25px;
+            h1 {
+                letter-spacing: 3px;
+                font-size: 18px;
             }
         }
 
@@ -166,7 +210,7 @@
 
             .img img {
                 width: 411px;
-                height: 420px;
+                height: 450px;
             }
 
             .content {
@@ -176,25 +220,42 @@
                 padding: 5px 0px;
                 padding-top: 50px;
                 font-family: 'Archivo Black', sans-serif;
-                border: 1px solid rgba(0, 0, 0, 0.164);
             }
 
-            .content p {
-                margin-top: 120px;
+            .content-p1 {
+                margin-top: 100px;
             }
 
-            a {
+            .content-a1 {
+                margin-top: 60px;
+                padding: 10px;
+                background-color: rgba(70, 70, 90, 0.863);
+                color: white;
+                border-radius: 7px;
+                text-decoration: none;
+            }
+
+            .content-a1:hover {
+                background-color: rgba(70, 70, 90, 0.527);
+            }
+
+            .content-p2 {
+                margin-top: 70px;
+            }
+
+            .content-a2 {
                 color: rgba(103, 106, 109, 0.452);
-                font-size: 10px;
+                font-size: 12px;
             }
 
             h4 {
-                margin-top: 15px;
+                margin-top: 25px;
+                font-size: 12px;
             }
 
-            .btn {
-                margin-top: 25px;
-                padding: 10px 25px;
+            h1 {
+                letter-spacing: 3px;
+                font-size: 20px;
             }
         }
 
@@ -207,7 +268,7 @@
 
             .img img {
                 width: 414px;
-                height: 420px;
+                height: 450px;
             }
 
             .content {
@@ -217,25 +278,42 @@
                 padding: 5px 0px;
                 padding-top: 50px;
                 font-family: 'Archivo Black', sans-serif;
-                border: 1px solid rgba(0, 0, 0, 0.164);
             }
 
-            .content p {
-                margin-top: 120px;
+            .content-p1 {
+                margin-top: 100px;
             }
 
-            a {
+            .content-a1 {
+                margin-top: 60px;
+                padding: 10px;
+                background-color: rgba(70, 70, 90, 0.863);
+                color: white;
+                border-radius: 7px;
+                text-decoration: none;
+            }
+
+            .content-a1:hover {
+                background-color: rgba(70, 70, 90, 0.527);
+            }
+
+            .content-p2 {
+                margin-top: 70px;
+            }
+
+            .content-a2 {
                 color: rgba(103, 106, 109, 0.452);
-                font-size: 10px;
+                font-size: 12px;
             }
 
             h4 {
-                margin-top: 15px;
+                margin-top: 25px;
+                font-size: 12px;
             }
 
-            .btn {
-                margin-top: 25px;
-                padding: 10px 25px;
+            h1 {
+                letter-spacing: 3px;
+                font-size: 20px;
             }
         }
     </style>
@@ -243,14 +321,22 @@
 
 <body>
     <div class="all">
+        <div class="header">
+            <img src="rectangle.svg" alt="">
+        </div>
         <div class="img"><img src="/download.png" alt="Frendy_Logo"></div>
         <div class="content">
-            <h1>WELCOME TO FRENDY HINDI</h1>
+            <h1>WELCOME TO FRENDY</h1>
             <h4>Frendy Partner Registration Form</h4><br>
-			<form action="/form2-language" method="post">
-                <button class="btn" type="submit" name="languageButton" value="hindi">REGISTER NOW HINDI</button>
+            <form action="/form2-language" method="post">
+                <button class="btn content-p1 content-a1" type="submit" name="languageButton" value="english">REGISTER NOW</button>
+                <p class="content-p2"><a class="content-a2" href="" style="text-decoration: none;">TERMS & CONDITIONS</a>
+                </p>
             </form>
-            <p><a href="" style="text-decoration: none;">TERMS & CONDITIONS</a></p>
+        
+            <!-- <p class="content-p1"><a class="content-a1" href="/form2">REGISTER NOW</a></p> -->
+            <!-- <p class="content-p2"><a class="content-a2" href="" style="text-decoration: none;">TERMS & CONDITIONS</a>
+            </p> -->
         </div>
     </div>
 </body>

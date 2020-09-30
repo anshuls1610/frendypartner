@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,8 +12,9 @@
             margin: 0px;
             padding: 0px;
         }
+
         .container {
-            width: fit-content;
+            width: 500px;
             height: fit-content;
             margin: 50px 50px 50px 0px;
         }
@@ -27,33 +29,33 @@
         }
 
         .progress-info {
-            margin-top: -20px;
+            margin-top: -30px;
         }
 
         .progress-info span {
             font-weight: bold;
-            font-size: 18px;
+            font-size: 15px;
         }
 
         .progress-info-span-1 {
-            margin: 0px 60px 0px 10px;
+            margin: 0px 30px 0px 10px;
         }
 
         .progress-info-span-2 {
-            margin: 0px 25px 0px 0px;
+            margin: 0px px 0px 0px;
         }
 
         .progress-info-span-3 {
-            margin: 0px 52px 0px 55px;
+            margin: 0px 52px 0px 43px;
         }
 
         .progress-info-span-4 {
-            margin: 0px 5px 0px 45px;
+            margin: 0px 5px 0px 5px;
         }
 
         .form {
             padding: 20px;
-            width: 626px;
+            width: 450px;
         }
 
         .btn {
@@ -66,16 +68,16 @@
             border: none;
             outline: none;
             border-radius: 5px;
-			text-decoration: none;
+            text-decoration: none;
         }
 
         .Path_20 {
             overflow: visible;
             position: absolute;
-            width: 15px;
+            width: 12px;
             height: 12px;
-            left: 713px;
-            top: 158px;
+            left: 445px;
+            top: 155px;
             transform: matrix(1, 0, 0, 1, 0, 0);
         }
 
@@ -87,10 +89,10 @@
         .Path_21 {
             overflow: visible;
             position: absolute;
-            width: 15px;
+            width: 12px;
             height: 12px;
-            left: 901px;
-            top: 158px;
+            left: 577px;
+            top: 155px;
             transform: matrix(1, 0, 0, 1, 0, 0);
         }
 
@@ -102,10 +104,10 @@
         .Path_22 {
             overflow: visible;
             position: absolute;
-            width: 15px;
+            width: 12px;
             height: 12px;
-            left: 1089px;
-            top: 158px;
+            left: 710px;
+            top: 155px;
             transform: matrix(1, 0, 0, 1, 0, 0);
         }
 
@@ -117,10 +119,10 @@
         .Path_23 {
             overflow: visible;
             position: absolute;
-            width: 15px;
+            width: 12px;
             height: 12px;
-            left: 1277px;
-            top: 158px;
+            left: 843px;
+            top: 155px;
             transform: matrix(1, 0, 0, 1, 0, 0);
         }
 
@@ -130,17 +132,17 @@
         }
 
         .image-section {
-            margin: 50px;
-            width: 600px;
+            /* margin: 50px; */
+            margin-left: 100px;
+            width: 300px;
             text-align: center;
             height: fit-content;
         }
 
         .all {
             display: flex;
-            border: 3px solid orange;
-            margin: 0px 150px 0px 130px;
-            width: 1252px;
+            /* margin: 0px 150px 0px 130px; */
+            width: fit-content;
         }
 
         .image-section-img-small img {
@@ -150,7 +152,7 @@
         }
 
         .image-section-img-large img {
-            width: 400px;
+            width: 300px;
             height: 400px;
             overflow: visible;
         }
@@ -177,16 +179,689 @@
         .left-span {
             display: flex;
         }
-        #hatao{
+
+        #hatao {
             border: none;
             outline: none;
             margin-left: 15px;
+        }
+
+        .header {
+            display: none;
+        }
+
+        input {
+            width: 90px;
+        }
+
+        @media only screen and (max-width: 360px) {
+            .Path_20 {
+                overflow: visible;
+                position: absolute;
+                width: 12px;
+                height: 12px;
+                left: 45px;
+                top: 135px;
+                transform: matrix(1, 0, 0, 1, 0, 0);
+            }
+
+            #Path_20 {
+                fill: white;
+                /* fill: black; */
+            }
+
+            .Path_21 {
+                overflow: visible;
+                position: absolute;
+                width: 12px;
+                height: 12px;
+                left: 178px;
+                top: 135px;
+                transform: matrix(1, 0, 0, 1, 0, 0);
+            }
+
+            #Path_21 {
+                fill: white;
+                /* fill: black; */
+            }
+
+            .Path_22 {
+                overflow: visible;
+                position: absolute;
+                width: 12px;
+                height: 12px;
+                left: 312px;
+                top: 135px;
+                transform: matrix(1, 0, 0, 1, 0, 0);
+            }
+
+            #Path_22 {
+                fill: white;
+                /* fill: black; */
+            }
+
+            .Path_23 {
+                overflow: visible;
+                position: absolute;
+                width: 12px;
+                height: 12px;
+                left: 444px;
+                top: 135px;
+                transform: matrix(1, 0, 0, 1, 0, 0);
+            }
+
+            #Path_23 {
+                fill: white;
+                /* fill: black; */
+            }
+
+            .header {
+                height: 80px;
+                width: 500px;
+                background: linear-gradient(90deg, #5A55AA 6.67%, #242348 92.08%);
+            }
+
+            .header>.logo>img {
+                width: 80px;
+                height: auto;
+                margin-left: 25px;
+            }
+
+            .form {
+                padding: 10px;
+                margin: 0px;
+            }
+
+            .container {
+                margin-top: -50px;
+                margin-left: 0px;
+            }
+
+            .image-section-img-large img {
+                display: none;
+            }
+
+            .image-section-img-small img {
+                display: none;
+            }
+
+            .all {
+                width: 360px;
+                margin-left: 0px;
+                flex-direction: column;
+                height: fit-content;
+            }
+
+            .image-section {
+                width: 600px;
+                text-align: center;
+                height: fit-content;
+            }
+
+            .heading {
+                display: none;
+            }
+
+            .progress {
+                /* height: 100px; */
+                text-align: center;
+                margin-top: 60px;
+            }
+
+            .progress-info {
+                margin-top: -20px;
+            }
+
+            .progress-info span {
+                font-weight: bold;
+                font-size: 18px;
+            }
+
+            .progress-info-span-1 {
+                margin: 0px 10px 0px 5px;
+            }
+
+            .progress-info-span-2 {
+                margin: 0px 5px 0px 10px;
+            }
+
+            .progress-info-span-3 {
+                margin: 0px 5px 0px 15px;
+            }
+
+            .progress-info-span-4 {
+                margin: 0px 0px 0px 40px;
+            }
+
+            #form2last_name input {
+                /* width: 50px; */
+            }
+
+            .btn {
+                margin-top: 60px;
+            }
+
+            .header {
+                display: block;
+            }
+
+            .sig_place {
+                flex-direction: column;
+            }
+
+            .left {
+                margin: 10px 0px;
+            }
+
+            .right {
+                margin: 10px 0px;
+            }
+        }
+        @media only screen and (min-width: 361px) and (max-width: 375px) {
+            .Path_20 {
+                overflow: visible;
+                position: absolute;
+                width: 12px;
+                height: 12px;
+                left: 45px;
+                top: 135px;
+                transform: matrix(1, 0, 0, 1, 0, 0);
+            }
+
+            #Path_20 {
+                fill: white;
+                /* fill: black; */
+            }
+
+            .Path_21 {
+                overflow: visible;
+                position: absolute;
+                width: 12px;
+                height: 12px;
+                left: 178px;
+                top: 135px;
+                transform: matrix(1, 0, 0, 1, 0, 0);
+            }
+
+            #Path_21 {
+                fill: white;
+                /* fill: black; */
+            }
+
+            .Path_22 {
+                overflow: visible;
+                position: absolute;
+                width: 12px;
+                height: 12px;
+                left: 312px;
+                top: 135px;
+                transform: matrix(1, 0, 0, 1, 0, 0);
+            }
+
+            #Path_22 {
+                fill: white;
+                /* fill: black; */
+            }
+
+            .Path_23 {
+                overflow: visible;
+                position: absolute;
+                width: 12px;
+                height: 12px;
+                left: 444px;
+                top: 135px;
+                transform: matrix(1, 0, 0, 1, 0, 0);
+            }
+
+            #Path_23 {
+                fill: white;
+                /* fill: black; */
+            }
+
+            .header {
+                height: 80px;
+                width: 500px;
+                background: linear-gradient(90deg, #5A55AA 6.67%, #242348 92.08%);
+            }
+
+            .header>.logo>img {
+                width: 80px;
+                height: auto;
+                margin-left: 25px;
+            }
+
+            .form {
+                padding: 10px;
+                margin: 0px;
+            }
+
+            .container {
+                margin-top: -50px;
+                margin-left: 0px;
+            }
+
+            .image-section-img-large img {
+                display: none;
+            }
+
+            .image-section-img-small img {
+                display: none;
+            }
+
+            .all {
+                width: 360px;
+                margin-left: 0px;
+                flex-direction: column;
+                height: fit-content;
+            }
+
+            .image-section {
+                width: 600px;
+                text-align: center;
+                height: fit-content;
+            }
+
+            .heading {
+                display: none;
+            }
+
+            .progress {
+                /* height: 100px; */
+                text-align: center;
+                margin-top: 60px;
+            }
+
+            .progress-info {
+                margin-top: -20px;
+            }
+
+            .progress-info span {
+                font-weight: bold;
+                font-size: 18px;
+            }
+
+            .progress-info-span-1 {
+                margin: 0px 10px 0px 5px;
+            }
+
+            .progress-info-span-2 {
+                margin: 0px 5px 0px 10px;
+            }
+
+            .progress-info-span-3 {
+                margin: 0px 5px 0px 15px;
+            }
+
+            .progress-info-span-4 {
+                margin: 0px 0px 0px 40px;
+            }
+
+            #form2last_name input {
+                /* width: 50px; */
+            }
+
+            .btn {
+                margin-top: 60px;
+            }
+
+            .header {
+                display: block;
+            }
+
+            .sig_place {
+                flex-direction: column;
+            }
+
+            .left {
+                margin: 10px 0px;
+            }
+
+            .right {
+                margin: 10px 0px;
+            }
+        }
+        @media only screen and (min-width: 376px) and (max-width: 411px) {
+            .Path_20 {
+                overflow: visible;
+                position: absolute;
+                width: 12px;
+                height: 12px;
+                left: 45px;
+                top: 135px;
+                transform: matrix(1, 0, 0, 1, 0, 0);
+            }
+
+            #Path_20 {
+                fill: white;
+                /* fill: black; */
+            }
+
+            .Path_21 {
+                overflow: visible;
+                position: absolute;
+                width: 12px;
+                height: 12px;
+                left: 178px;
+                top: 135px;
+                transform: matrix(1, 0, 0, 1, 0, 0);
+            }
+
+            #Path_21 {
+                fill: white;
+                /* fill: black; */
+            }
+
+            .Path_22 {
+                overflow: visible;
+                position: absolute;
+                width: 12px;
+                height: 12px;
+                left: 312px;
+                top: 135px;
+                transform: matrix(1, 0, 0, 1, 0, 0);
+            }
+
+            #Path_22 {
+                fill: white;
+                /* fill: black; */
+            }
+
+            .Path_23 {
+                overflow: visible;
+                position: absolute;
+                width: 12px;
+                height: 12px;
+                left: 444px;
+                top: 135px;
+                transform: matrix(1, 0, 0, 1, 0, 0);
+            }
+
+            #Path_23 {
+                fill: white;
+                /* fill: black; */
+            }
+
+            .header {
+                height: 80px;
+                width: 500px;
+                background: linear-gradient(90deg, #5A55AA 6.67%, #242348 92.08%);
+            }
+
+            .header>.logo>img {
+                width: 80px;
+                height: auto;
+                margin-left: 25px;
+            }
+
+            .form {
+                padding: 10px;
+                margin: 0px;
+            }
+
+            .container {
+                margin-top: -50px;
+                margin-left: 0px;
+            }
+
+            .image-section-img-large img {
+                display: none;
+            }
+
+            .image-section-img-small img {
+                display: none;
+            }
+
+            .all {
+                width: 360px;
+                margin-left: 0px;
+                flex-direction: column;
+                height: fit-content;
+            }
+
+            .image-section {
+                width: 600px;
+                text-align: center;
+                height: fit-content;
+            }
+
+            .heading {
+                display: none;
+            }
+
+            .progress {
+                /* height: 100px; */
+                text-align: center;
+                margin-top: 60px;
+            }
+
+            .progress-info {
+                margin-top: -20px;
+            }
+
+            .progress-info span {
+                font-weight: bold;
+                font-size: 18px;
+            }
+
+            .progress-info-span-1 {
+                margin: 0px 10px 0px 5px;
+            }
+
+            .progress-info-span-2 {
+                margin: 0px 5px 0px 10px;
+            }
+
+            .progress-info-span-3 {
+                margin: 0px 5px 0px 15px;
+            }
+
+            .progress-info-span-4 {
+                margin: 0px 0px 0px 40px;
+            }
+
+            #form2last_name input {
+                /* width: 50px; */
+            }
+
+            .btn {
+                margin-top: 60px;
+            }
+
+            .header {
+                display: block;
+            }
+
+            .sig_place {
+                flex-direction: column;
+            }
+
+            .left {
+                margin: 10px 0px;
+            }
+
+            .right {
+                margin: 10px 0px;
+            }
+        }
+        @media only screen and (min-width: 412px) and (max-width: 414px) {
+            .Path_20 {
+                overflow: visible;
+                position: absolute;
+                width: 12px;
+                height: 12px;
+                left: 45px;
+                top: 135px;
+                transform: matrix(1, 0, 0, 1, 0, 0);
+            }
+
+            #Path_20 {
+                fill: white;
+                /* fill: black; */
+            }
+
+            .Path_21 {
+                overflow: visible;
+                position: absolute;
+                width: 12px;
+                height: 12px;
+                left: 178px;
+                top: 135px;
+                transform: matrix(1, 0, 0, 1, 0, 0);
+            }
+
+            #Path_21 {
+                fill: white;
+                /* fill: black; */
+            }
+
+            .Path_22 {
+                overflow: visible;
+                position: absolute;
+                width: 12px;
+                height: 12px;
+                left: 312px;
+                top: 135px;
+                transform: matrix(1, 0, 0, 1, 0, 0);
+            }
+
+            #Path_22 {
+                fill: white;
+                /* fill: black; */
+            }
+
+            .Path_23 {
+                overflow: visible;
+                position: absolute;
+                width: 12px;
+                height: 12px;
+                left: 444px;
+                top: 135px;
+                transform: matrix(1, 0, 0, 1, 0, 0);
+            }
+
+            #Path_23 {
+                fill: white;
+                /* fill: black; */
+            }
+
+            .header {
+                height: 80px;
+                width: 500px;
+                background: linear-gradient(90deg, #5A55AA 6.67%, #242348 92.08%);
+            }
+
+            .header>.logo>img {
+                width: 80px;
+                height: auto;
+                margin-left: 25px;
+            }
+
+            .form {
+                padding: 10px;
+                margin: 0px;
+            }
+
+            .container {
+                margin-top: -50px;
+                margin-left: 0px;
+            }
+
+            .image-section-img-large img {
+                display: none;
+            }
+
+            .image-section-img-small img {
+                display: none;
+            }
+
+            .all {
+                width: 360px;
+                margin-left: 0px;
+                flex-direction: column;
+                height: fit-content;
+            }
+
+            .image-section {
+                width: 600px;
+                text-align: center;
+                height: fit-content;
+            }
+
+            .heading {
+                display: none;
+            }
+
+            .progress {
+                /* height: 100px; */
+                text-align: center;
+                margin-top: 60px;
+            }
+
+            .progress-info {
+                margin-top: -20px;
+            }
+
+            .progress-info span {
+                font-weight: bold;
+                font-size: 18px;
+            }
+
+            .progress-info-span-1 {
+                margin: 0px 10px 0px 5px;
+            }
+
+            .progress-info-span-2 {
+                margin: 0px 5px 0px 10px;
+            }
+
+            .progress-info-span-3 {
+                margin: 0px 5px 0px 15px;
+            }
+
+            .progress-info-span-4 {
+                margin: 0px 0px 0px 40px;
+            }
+
+            #form2last_name input {
+                /* width: 50px; */
+            }
+
+            .btn {
+                margin-top: 60px;
+            }
+
+            .header {
+                display: block;
+            }
+
+            .sig_place {
+                flex-direction: column;
+            }
+
+            .left {
+                margin: 10px 0px;
+            }
+
+            .right {
+                margin: 10px 0px;
+            }
+        }
+        #check{
+            width: 25px;
         }
     </style>
 </head>
 
 <body>
+    <!-- <div class="header">
+        <img src="https://nikfashions.in/wp-content/uploads/2019/03/Navy-Blue-Plain-Square-Frame.jpg" alt="">
+    </div> -->
     <div class="all">
+        <div class="header">
+            <div class="logo">
+                <img src="logo.jpeg" alt="">
+            </div>
+        </div>
         <div class="image-section">
             <div class="image-section-img-small"><img src="2.jpg" alt=""></div>
             <div class="image-section-img-large"><img src="1.jpg" alt=""></div>
@@ -217,26 +892,26 @@
                 </path>
             </svg>
             <div class="progress">
-                <svg height="100" width="30">
-                    <circle cx="15" cy="50" r="13" stroke="black" stroke-width="1" fill="black" />
+                <svg height="100" width="20">
+                    <circle cx="10" cy="50" r="8" stroke="black" stroke-width="1" fill="black" />
                 </svg>
-                <svg height="100" width="150">
-                    <path d="M 0 50 l 150 0" stroke="black" stroke-width="1" fill="black" />
+                <svg height="100" width="105">
+                    <path d="M 0 50 l 105 0" stroke="black" stroke-width="1" fill="black" />
                 </svg>
-                <svg height="100" width="30">
-                    <circle cx="15" cy="50" r="13" stroke="black" stroke-width="1" fill="black" />
+                <svg height="100" width="20">
+                    <circle cx="10" cy="50" r="8" stroke="black" stroke-width="1" fill="black" />
                 </svg>
-                <svg height="100" width="150">
-                    <path d="M 0 50 l 150 0" stroke="black" stroke-width="1" fill="black" />
+                <svg height="100" width="105">
+                    <path d="M 0 50 l 105 0" stroke="black" stroke-width="1" fill="black" />
                 </svg>
-                <svg height="100" width="30">
-                    <circle cx="15" cy="50" r="13" stroke="black" stroke-width="1" fill="black" />
+                <svg height="100" width="20">
+                    <circle cx="10" cy="50" r="8" stroke="black" stroke-width="1" fill="black" />
                 </svg>
-                <svg height="100" width="150">
-                    <path d="M 0 50 l 150 0" stroke="black" stroke-width="1" fill="black" />
+                <svg height="100" width="105">
+                    <path d="M 0 50 l 105 0" stroke="black" stroke-width="1" fill="black" />
                 </svg>
-                <svg height="100" width="30">
-                    <circle cx="15" cy="50" r="13" stroke="black" stroke-width="1" fill="black" />
+                <svg height="100" width="20">
+                    <circle cx="10" cy="50" r="8" stroke="black" stroke-width="1" fill="black" />
                 </svg>
             </div>
             <div class="progress-info">
@@ -246,40 +921,43 @@
                 <span class="progress-info-span-4">Submit</span>
             </div>
             <div class="form">
-                    <form action="/form5-data" method="POST" enctype="multipart/form-data">
-                <h4 style="text-align: center;">I hereby confirm that I have read and understood the terms & conditions
-                    shared with me and apply to become a Partner at Frendy (Areli Commerce Pvt Ltd). <br> I agree to
-                    abide by the terms, conditions, rules, regulation and other statutory requirements applicable to the
-                    respective company. <br>I have understood my roles and responsibilities as a Frendy Partner and <br>
-                </h4>
-                <div class="sig_place">
-                    <div class="left">
-                        <span class="left-span">
-                            <div class="signature">Signature :</div>
-                            <!-- <div class="upload" style="margin-left: 15px;"> -->
-                                    <input type="file" id="image" name="signatureImage" value="" required>
-                            <!--  </div> -->
-                        </span>
-                        <!-- <button>Upload Signature <i class="fa fa-cloud-upload" aria-hidden="true"></i></button> -->
-                        <svg height="8" width="660">
-                            <!-- <path d="M 0 0 l 200 0" stroke="black" stroke-width="1" fill="" /> -->
-                        </svg>
-                    </div>
-                    <div class="right">
-                        <label for="">Place :</label><input
-                            id="hatao" type="text" name="form5place" required>
+                <form action="/form5-data" method="POST" enctype="multipart/form-data">
+                    
+                    <h4 style="text-align: center;">
+                        <input id="check" type="checkbox"> I hereby confirm that I have read and understood the terms &
+                        conditions
+                        shared with me and apply to become a Partner at Frendy (Areli Commerce Pvt Ltd). <br>
+                        <input id="check" type="checkbox"> I agree to
+                        abide by the terms, conditions, rules, regulation and other statutory requirements applicable to
+                        the
+                        respective company. <br>
+                        <input id="check" type="checkbox"> I have understood my roles and responsibilities as a Frendy Partner and
+                        <br>
+                    </h4>
+                    <div class="sig_place">
+                        <div class="left">
+                            <span class="left-span">
+                                <div class="signature">Signature :</div>
+                                <div class="upload" style="margin-left: 15px;">
+                                <input type="file" id="image" name="signatureImage" value="" required>
+                                 </div>
+                            </span>
+                        </div>
+                        <div class="right">
+                            <label for="">Place :</label><input id="hatao" type="text" name="form5place">
                             <svg height="8" width="215">
                                 <path d="M 50 0 l 165 0" stroke="black" stroke-width="1" fill="" />
                             </svg>
+                        </div>
+                    </div> <br>
+                    <div>
+                        Date : <input style="margin-left: 42px;" type="date" name="date">
+                    </div><br><br>
+                    <div style="text-align: center;">
+                        <button class="btn" name="languageButton" value="english" type="submit">SUBMIT</button>
+						<input class="btn" type="button" value="Go back!" onclick="history.back()">
                     </div>
-                </div>
-                <div>
-                    Date : <input style="margin-left: 42px;" type="date" name="date" required>
-                </div><br><br>
-                <div style="text-align: center;">
-                    <button class="btn" type="submit" name="languageButton" value="english">SUBMIT</button>
-                </div>
-				</form>
+                </form>
             </div>
         </div>
     </div>

@@ -7,6 +7,7 @@ const partnerSchema = new mongoose.Schema({
   gender: String,
   education: String,
   searchquery:String,
+  form_language:String,
   Address: {
     house: String,
     block: String,

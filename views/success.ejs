@@ -1,8 +1,51 @@
 <%- include('partials/header') %>
 <div class="jumbotron">
-    <h3><%= data %></h3>
-    <a class="btn btn-dark btn-md btn-home" href="/" role="button"
-          >Home Page</a
-        >
+	<h3><%= message %></h3>
+    
+	<div class="container-fluid">
+		
+			<div class="row">
+				<div class="col-4">
+                    <ul>
+                        <li><p>Partner first Name :<%= data.firstName %></p></li>
+                        <li><p>Partner last Name :<%= data.lastName %></p></li>
+                        <li><p>Partner Age :<%= data.age %></p></li>
+                        <li><p>Partner Gender :<%= data.gender %></p></li>
+                        <li><p>Partner Education :<%= data.education %></p></li>
+                        <li><p>Partner Place :<%= data.form5.place %></p></li>
+                        <li><p>Form Date :<%= data.form5.date %></p></li>
+						<li><p>Signature : 
+							<img class="signature"src="<%= data.form5.signature %>">
+							</p>
+						</li>
+                    </ul>
+                </div>
+                <div class="col-4">
+                    <ul>
+                        <li><p>Occupation :<%= data.form3.occupation %></p></li>
+                        <li><p>Business :<%= data.form3.business %></p></li>
+                        <li><p>eFrendy Partner:<%= data.form3.eFrendyPartner %></p></li>
+                        <li><p>smartPhone :<%= data.form3.smartPhone %></p></li>
+                        <li><p>Payment Mode :<%= data.form3.payment %></p></li>
+                        <li><p>Have a joint family :<%= data.form3.jointFamily %></p></li>
+                        <li><p>owns a flat:<%= data.form3.flat %></p></li>
+                        <li><p>staying in rented house :<%= data.form3.How_long_you_have_been_staying_in_the_house %></p></li> 
+                    </ul>
+                </div>
+                <div class="col-4">
+                    <ul>
+                        <li><p>Society has :<%= data.form4. Does_your_society_has %></p></li>
+                        <li><p>number of flats in buildings :<%= data.form4.If_flats_how_many_flats %></p></li>
+                        <li><p>number of buildings<%= data.form4.how_many_such_buildings %></p></li>
+                        <li><p>Total flats/houses:<%= data.form4.total_flats_or_houses %></p></li>
+                        <li><p>Has a common whatsapp group ?:<%= data.form4.have_a_whatsapp_group_for_residents %></p></li>
+                        <li><p>Has a common communication platform ? :<%= data.form4.have_a_common_communication_platform_for_residents 								%></p></li>
+                    </ul>
+                </div>
+			</div>
+		
+	</div>
+	<a class="btn btn-primary" href="/partner/<%= data._id %>/edit">Edit</a>
+	<a class="btn btn-dark btn-md btn-home" href="/" role="button">Home Page</a>
 </div>
 <%- include('partials/footer') %>

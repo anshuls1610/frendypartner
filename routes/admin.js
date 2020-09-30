@@ -22,7 +22,7 @@ router.post("/adminLogIn",(req,res)=>{
     })
       }
     else{
-      res.render("../views/success",{data:"Please ensure you have entered correct username and password"})
+      res.render("../views/invalid",{data:"Please ensure you have entered correct username and password"})
     }
 });
 

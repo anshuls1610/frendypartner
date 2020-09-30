@@ -7,7 +7,7 @@ const path = require('path');
 var searchquery="";
 
 router.post("/partner",function(req,res){
-  // console.log(req.body.languageButton);
+  console.log(req.body.languageButton);
     if (req.body.languageButton==="english"){
     res.sendFile(path.join(__dirname, '../english', '/form-1.html'))
   }
@@ -20,7 +20,7 @@ router.post("/partner",function(req,res){
 });
 
 router.post("/form2-language",function(req,res){
-  // console.log(req.body.languageButton);
+  console.log(req.body.languageButton);
   if (req.body.languageButton==="english"){
  res.sendFile(path.join(__dirname, '../english', '/form-2.html'))
   }
@@ -119,6 +119,7 @@ router.post("/form4-data",function(req,res){
 router.post("/form5-data", upload.single('signatureImage'), function(req, res, next){
 	console.log(req.file)
     Partner.findOneAndUpdate({searchquery:searchquery},{
+			form_language:req.body.languageButton,
 			form5:{
 			signature: req.file.path,
             place:req.body.form5place,
@@ -127,16 +128,25 @@ router.post("/form5-data", upload.single('signatureImage'), function(req, res, n
     },function(err,data){
         if(!err){
           if (req.body.languageButton==="english"){
-            res.render("success",{data:"Thank you for Registering with Frendy! We will contact you shortly!"})
+            res.render("success",{data:data, message:"Thank you for Registering with Frendy! We will contact you shortly!"})
           }
           else if(req.body.languageButton==="hindi"){
-            res.render("success",{data:"फ्रेंडी के साथ पंजीकरण करने के लिए धन्यवाद! हम आपसे शीघ्र ही संपर्क करेंगे!"})
+            res.render("success",{data:data, message:"फ्रेंडी के साथ पंजीकरण करने के लिए धन्यवाद! हम आपसे शीघ्र ही संपर्क करेंगे!"})
           }
           else{
-            res.render("success",{data:"ફ્રેન્ડી સાથે નોંધણી કરવા બદલ આભાર! અમે ટૂંક સમયમાં તમારો સંપર્ક કરીશું!"})
+            res.render("success",{data:data, message:"ફ્રેન્ડી સાથે નોંધણી કરવા બદલ આભાર! અમે ટૂંક સમયમાં તમારો સંપર્ક કરીશું!"})
           }
         }
-    })
-})
+    });
+	deleteMany();
+});
+
+function deleteMany(){
+  Partner.deleteMany({ form_language: null }).then(function(){ 
+    console.log("Data deleted"); // Success 
+}).catch(function(error){ 
+    console.log(error); // Failure 
+}); 
+}
 
 module.exports = router;
